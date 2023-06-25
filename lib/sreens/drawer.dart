@@ -51,10 +51,10 @@ class _MyDrawerState extends State<MyDrawer> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(10),
                 child: const Image(
-                  color: Colors.black87,
-                  image: AssetImage('assets/images/logo.png'),
+                  // color: Colors.black87,
+                  image: AssetImage('assets/images/logo.jpg'),
                   width: 100,
                 ),
               ),

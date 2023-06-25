@@ -44,8 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12),
+        child: Center(
           child: Column(
             children: [
               const Gap(25),
@@ -55,6 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 }),
                 child: Container(
                   height: 50,
+                  width: MediaQuery.of(context).size.width*0.9,
                   decoration: BoxDecoration(
                       color: Colors.purple.shade200,
                       borderRadius: BorderRadius.circular(10)),
@@ -68,11 +68,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               const Gap(40),
               ClipRRect(
-                borderRadius: BorderRadius.circular(50),
+                borderRadius: BorderRadius.circular(10),
                 child: const Image(
-                  color: Colors.black87,
-                  image: AssetImage('assets/images/logo.png'),
+                  // color: Colors.black87,
+                  image: AssetImage('assets/images/logo.jpg'),
                   width: 200,
+                  fit: BoxFit.contain,
                 ),
               ),
               const Gap(40),
@@ -81,11 +82,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   border: Border.all(width: 0.5,color: Colors.purple),
                   borderRadius: BorderRadius.circular(10)
                 ),
-                height: 400,
+                height: MediaQuery.of(context).size.width*0.85,
+                width: MediaQuery.of(context).size.width*0.9,
                 child: GridView.count(
                   physics: const BouncingScrollPhysics(),
                   crossAxisCount: 2,
-                  crossAxisSpacing: 10,
+                  crossAxisSpacing: 20,
                   children: [
                     GestureDetector(
                       onTap: () {
