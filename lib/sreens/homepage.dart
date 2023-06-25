@@ -30,10 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final Uri toTelegram =
         Uri(scheme: 'https', host: 't.me', path: 'class10shikxak');
-    final Uri moreNote = Uri(
-        scheme: 'https',
-        host: 'nexucorner.com',
-        path: '');
+    final Uri moreNote = Uri(scheme: 'https', host: 'nexucorner.com', path: '');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Class-10 Notes'),
@@ -54,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 }),
                 child: Container(
                   height: 50,
-                  width: MediaQuery.of(context).size.width*0.9,
+                  width: MediaQuery.of(context).size.width * 0.9,
                   decoration: BoxDecoration(
                       color: Colors.purple.shade200,
                       borderRadius: BorderRadius.circular(10)),
@@ -79,11 +76,10 @@ class _MyHomePageState extends State<MyHomePage> {
               const Gap(40),
               Container(
                 decoration: BoxDecoration(
-                  border: Border.all(width: 0.5,color: Colors.purple),
-                  borderRadius: BorderRadius.circular(10)
-                ),
-                height: MediaQuery.of(context).size.width*0.85,
-                width: MediaQuery.of(context).size.width*0.9,
+                    border: Border.all(width: 0.5, color: Colors.purple),
+                    borderRadius: BorderRadius.circular(10)),
+                height: MediaQuery.of(context).size.width * 0.85,
+                width: MediaQuery.of(context).size.width * 0.9,
                 child: GridView.count(
                   physics: const BouncingScrollPhysics(),
                   crossAxisCount: 2,
@@ -94,9 +90,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>  EnglishPage(
-                                onToggleDarkMode: widget.onToggleDarkMode,
-                              )),
+                              builder: (context) => EnglishPage(
+                                    onToggleDarkMode: widget.onToggleDarkMode,
+                                  )),
                         );
                       },
                       child: Column(
@@ -127,7 +123,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SocialPage(onToggleDarkMode: widget.onToggleDarkMode,)),
+                              builder: (context) => SocialPage(
+                                    onToggleDarkMode: widget.onToggleDarkMode,
+                                  )),
                         );
                       },
                       child: Column(
@@ -158,7 +156,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => NepaliPage(onToggleDarkMode: widget.onToggleDarkMode,)),
+                              builder: (context) => NepaliPage(
+                                    onToggleDarkMode: widget.onToggleDarkMode,
+                                  )),
                         );
                       },
                       child: Column(
@@ -187,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-               const Gap(40),
+              const Gap(40),
               GestureDetector(
                 onTap: () => setState(() {
                   _launched = _launchInBrowser(moreNote);
